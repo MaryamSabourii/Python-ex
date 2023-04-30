@@ -1,0 +1,11 @@
+#4.33/page130
+# Write a program that prompts the user to enter an integer between 0 and 15 and displays its corresponding hex number.
+
+num = int(input("Enter an integer between 0 and 15: "))
+
+if num < 0 or num > 15:
+    print("Invalid input. Please enter a number between 0 and 15.")
+else:
+    hex_num = hex(num)[2:]
+
+    print(f"The hex value is {hex_num}.")
