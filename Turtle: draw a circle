@@ -1,0 +1,7 @@
+#2.26/page61
+# Write a program that prompts the user to enter the center and radius of a circle, and then displays the circle and its area
+
+import turtle
+t = turtle.Turtle()  
+r = 100
+t.circle(r)
