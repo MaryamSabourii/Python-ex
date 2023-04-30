@@ -1,0 +1,7 @@
+#2.15/page59
+# Write a program that prompts the user to enter the side of a hexagon and displays its area
+
+import math
+s= eval(input("Enter the side:"))
+area = ((3*math.sqrt(3))/(2))*s**2
+print(f"The area of the hexagon is {area:.4f}")
