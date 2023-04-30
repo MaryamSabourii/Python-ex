@@ -1,0 +1,12 @@
+#2.7/page56
+# Write a program that prompts the user to enter the minutes (e.g., 1 billion), and displays the number of years and days for
+#the minutes. For simplicity, assume a year has 365 days.
+
+mint = eval(input("Enter the number of minutes: "))
+min_y = mint//525600
+min_d1 = mint%525600
+min_d2 = min_d1//1440
+min_h = min_d2//24
+min_m = min_h/60
+
+print(f"{mint} minutes is approximately {min_y} years and {min_d2} days")
