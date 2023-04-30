@@ -1,0 +1,18 @@
+#4.21/page124
+# Zeller’s congruence is an algorithm developed by Christian Zeller to calculate the day of the week
+
+year = int(input("Enter the year: "))
+month = int(input("Enter the month (1-12): "))
+day = int(input("Enter the day of the month (1-31): "))
+
+if month == 1 or month == 2:
+    month += 12
+    year -= 1
+
+j = year // 100
+k = year % 100
+
+h = (day + ((13 * (month + 1)) // 5) + k + (k // 4) + (j // 4) - (2 * j)) % 7
+
+days_of_week = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+print(f"The day of the week is {days_of_week[h]}.")
