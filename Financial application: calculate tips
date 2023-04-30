@@ -4,4 +4,4 @@
 s,g = eval(input("Enter the subtotal and a gratuity rate:"))
 gratuity = (s*g)/100
 total = s + gratuity
-print(f"The gratuity is {gratuity} and the total is {total}
+print(f"The gratuity is {gratuity:.2f} and the total is {total:.2f}")
