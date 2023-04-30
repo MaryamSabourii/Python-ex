@@ -1,0 +1,14 @@
+#4.17/page123
+# Write a program that plays the popular scissor-rockpaper game. (A scissor can cut a paper, a rock can knock a scissor, and a paper can wrap a rock.)
+
+import random
+options = ["scissor", "rock", "paper"]
+computer_choice = random.choice(options)
+user_choice = int(input("Enter 0 for scissor, 1 for rock, or 2 for paper: "))
+if (user_choice == 0 and computer_choice == "paper") or (user_choice == 1 and computer_choice == "scissor") or (user_choice == 2 and computer_choice == "rock"):
+    result = "win"
+elif (user_choice == 0 and computer_choice == "rock") or (user_choice == 1 and computer_choice == "paper") or (user_choice == 2 and computer_choice == "scissor"):
+    result = "lose"
+else:
+    result = "draw"
+print(f"You chose {options[user_choice]} and the computer chose {computer_choice}. You {result}!")
