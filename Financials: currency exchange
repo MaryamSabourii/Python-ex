@@ -1,0 +1,19 @@
+#4.18/page123
+# Write a program that prompts the user to enter the currency exchange rate between U.S. dollars and Chinese Renminbi (RMB).
+#Prompt the user to enter 0 to convert from U.S. dollars to Chinese RMB and 1 for vice versa. Prompt the user to enter the amount in U.S. dollars or Chinese RMB to
+#convert it to Chinese RMB or U.S. dollars, respectively
+
+exchange_rate = float(input("Enter the exchange rate from dollars to RMB: "))
+
+direction = int(input("Enter 0 to convert dollars to RMB and 1 vice versa: "))
+
+amount = float(input("Enter the dollar amount: "))
+
+if direction == 0:
+    converted_amount = amount * exchange_rate
+    print(f"{amount:.2f} U.S. dollars is equivalent to {converted_amount:.2f} Chinese RMB.")
+elif direction == 1:
+    converted_amount = amount / exchange_rate
+    print(f"{amount:.2f} Chinese RMB is equivalent to {converted_amount:.2f} U.S. dollars.")
+else:
+    print("Invalid direction entered. Please enter 0 or 1.")
