@@ -1,0 +1,25 @@
+#2.24/page61
+# Write a program that draws four hexagons in the center of the screen
+
+import turtle
+t = turtle.Turtle()
+
+def draw(t):
+    for i in range(6):
+        t.forward(50)
+        t.right(60)
+def pen(x,y):
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    
+
+draw(t)
+pen(100,0)
+draw(t)
+pen(0,100)
+draw(t)
+pen(100,100)
+draw(t)
+
+turtle.done()
