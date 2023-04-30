@@ -1,0 +1,8 @@
+#4.34/page130
+# Write a program that prompts the user to enter a hex character and displays its corresponding decimal integer
+
+hex_char = input("Enter a hex character: ")
+
+dec_num = int(hex_char, 16)
+
+print(f"The decimal value is {dec_num}.")
