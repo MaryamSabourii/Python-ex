@@ -1,0 +1,21 @@
+#4.5/page121
+# Write a program that prompts the user to enter an integer for today’s day of the week (Sunday is 0, Monday is 1, ..., and Saturday is 6). Also
+#prompt the user to enter the number of days after today for a future day and display the future day of the week
+
+today = int(input("Enter today's day (0 for Sunday, 1 for Monday, ..., 6 for Saturday): "))
+days_after = int(input("Enter the number of days elapsed since today: "))
+future_day = (today + days_after) % 7
+if future_day == 0:
+    print("The future day is Sunday")
+elif future_day == 1:
+    print("The future day is Monday")
+elif future_day == 2:
+    print("The future day is Tuesday")
+elif future_day == 3:
+    print("The future day is Wednesday")
+elif future_day == 4:
+    print("The future day is Thursday")
+elif future_day == 5:
+    print("The future day is Friday")
+else:
+    print("The future day is Saturday")
