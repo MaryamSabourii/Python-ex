@@ -1,0 +1,18 @@
+#5.18/page161
+# Write a program that reads an integer and displays all its smallest factors, also known as prime factors.
+#For example, if the input integer is 120, the output should be as follows: 2, 2, 2, 3, 5
+
+num = int(input("Enter an integer: "))
+factor = 2  #smallest prime factor
+
+while factor * factor <= num:
+    if num % factor == 0:
+        print(factor, end=", ")
+        num //= factor
+    else:
+        if factor == 2:
+            factor = 3
+        else:
+            factor += 2
+
+print(num)
