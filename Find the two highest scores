@@ -1,0 +1,17 @@
+#5.11/page 160
+# Write a program that prompts the user to enter the number of students and each student’s score, and displays the highest and second highest scores
+
+num_students = int(input("Enter the number of students: "))
+highest_score = 0
+second_highest_score = 0
+
+for i in range(num_students):
+    score = eval(input("Enter the score for student {}: ".format(i+1)))
+    if score > highest_score:
+        second_highest_score = highest_score
+        highest_score = score
+    elif score > second_highest_score:
+        second_highest_score = score
+
+print("The highest score is:", highest_score)
+print("The second highest score is:", second_highest_score)
