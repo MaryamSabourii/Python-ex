@@ -1,0 +1,10 @@
+#5.17/page160
+# Write a program that displays the characters in the ASCII character table from ! to ~. Display ten characters per line.
+#The characters are separated by exactly one space.
+
+for i in range(33, 127):
+    print(chr(i), end=" ")
+    
+    #If print ten charachter,print new line
+    if (i - 32) % 10 == 0:
+        print()
