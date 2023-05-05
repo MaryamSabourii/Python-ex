@@ -1,0 +1,23 @@
+#5.19/161
+# Write a program that prompts the user to enter an integer from 1 to 15 and displays a pyramid
+
+
+num = int(input("Enter an integer from 1 to 15: "))
+
+space = num*3
+
+for i in range(1, num+1): #space before numbers
+    if i<10:
+        print(" " * (space), end="")
+        space -= 2
+        space1 = space
+    else:
+        print(" " * (space1-1), end="")
+        space1 -=3    
+    for j in range(i, 0, -1): #start num until one
+        print(j, end=" ")
+    for k in range(2, i+1): #continue from two until num
+        print(k, end=" ")
+        
+    print() #new line
+
