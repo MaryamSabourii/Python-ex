@@ -1,0 +1,35 @@
+#5.31/page 161
+#Write a program that prompts the user to enter the year and first day of the year,
+#and displays on the console the calendar table for the year.
+
+year = int(input("Enter the year: "))
+first_day = int(input("Enter the first day of the year (0=Sunday, 1=Monday, etc.): "))
+
+#is leap year or not?
+is_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+#number of days in each month
+days_in_month = [31, 28 + is_leap_year, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+#month names
+month_names = ["January", "February", "March", "April", "May", "June",
+               "July", "August", "September", "October", "November", "December"]
+
+#table header
+# each month
+for i in range(0, 12):
+    #month name
+    print("\n\n{:^25}".format(month_names[i]),"\n____________________________\n","{:<20}".format("Su  Mo  Tu  We  Th  Fr  Sa"))
+    #spaces before the first day of the month
+    num_spaces = first_day % 7
+    #first row of the month
+    print(" " * (4 * num_spaces), end="")
+    for j in range(1, days_in_month[i] + 1):
+        print("{:>3}".format(j), end=" ")
+        # If it's the last day of the week, start a new line
+        if (j + num_spaces) % 7 == 0:
+            print()
+    #new line after the last row of the month
+    print()
+    # Calculate the first day of the next month
+    first_day = (first_day + days_in_month[i]) % 7
