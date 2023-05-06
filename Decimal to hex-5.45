@@ -1,0 +1,6 @@
+#5.45
+#Write a program that prompts the user to enter a decimal integer and displays its corresponding hexadecimal value.
+
+decimal = int(input("Enter a decimal integer: "))
+hexadecimal = hex(decimal)
+print("The hexadecimal value of {} is {}".format(decimal, hexadecimal[2:]))
