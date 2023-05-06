@@ -1,0 +1,32 @@
+#5.30/page 161
+#Write a program that prompts the user to enter the year and first day of the year
+# and displays the first day of each month in the year on the console
+
+year = int(input("Enter the year: "))
+first_day = int(input("Enter the first day of the year (0 for Sunday, 1 for Monday, etc.): "))
+
+#list of month names
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+#list of days
+days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+for month in range(12):
+    print(months[month], "1,", year, "is", days[first_day])
+    
+    #calculate the number of days in the month
+    if month == 1:
+        # February has 28 days, or 29 in a leap year
+        if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+            days_in_month = 29
+        else:
+            days_in_month = 28
+    elif month in [3, 5, 8, 10]:
+        # April, June, September, and November have 30 days
+        days_in_month = 30
+    else:
+        # all other months have 31 days
+        days_in_month = 31
+        
+    # update the first day for the next month
+    first_day = (first_day + days_in_month) % 7
