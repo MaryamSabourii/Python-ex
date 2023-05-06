@@ -1,0 +1,14 @@
+
+#5.29/page 161
+# Write a program that displays, ten per line, all the leap years in the twenty-first century
+#(from year 2001 to 2100). The years are separated by exactly one space.
+
+
+for year in range(2001, 2101):
+    #check leap year
+    if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+        #space separator
+        print(year, end=" ")
+        #newline
+        if year % 10 == 0:
+            print()
