@@ -1,0 +1,25 @@
+#5.38/page 165
+
+# You can use the time.sleep(seconds) function in the time module to let the program pause for the specified seconds. Write a
+#program that prompts the user to enter the number of seconds, displays a message at every second, and terminates when the time expires.
+
+
+import time
+
+seconds = int(input("Enter the number of seconds: "))
+start_time = time.time()
+
+while True:
+    elapsed_time = time.time() - start_time
+    remaining_time = seconds - int(elapsed_time)
+
+    if int(remaining_time) == seconds:
+        pass
+    elif int(remaining_time) <= 0:
+        print("Stopped")
+        break
+    elif int(remaining_time) == 1:
+        print("1 second remaining")
+    else:
+        print("{} seconds remaining".format(int(remaining_time)))
+    time.sleep(1)
