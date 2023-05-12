@@ -1,3 +1,8 @@
+# 6.2/ page 203
+# Write a function that computes the sum of the digits in an integer. Use the following function header:
+# def sumDigits(n): For example, sumDigits(234) returns 9 (2 + 3 + 4).
+
+
 def sumDigits(n):
     sum = 0
     while n > 0:
